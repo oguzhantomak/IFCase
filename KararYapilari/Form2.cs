@@ -148,6 +148,36 @@ namespace KararYapilari
 
         private void Btn4_Click(object sender, EventArgs e)
         {
+            double siparisAdet = Convert.ToInt32(txtGelenDeger1.Text);
+            double indirimMiktar;
+            double birimFiyat;
+            double toplamFiyat=siparisAdet*5;
+            double sonFiyat;
+            if (siparisAdet<20)
+            {
+                indirimMiktar = toplamFiyat * 0.05;
+                birimFiyat = (toplamFiyat - indirimMiktar) / siparisAdet;
+
+                toplamFiyat += toplamFiyat - indirimMiktar;
+                MessageBox.Show("Test");
+
+            }
+            else if (siparisAdet>20 && siparisAdet<=50)
+            {
+                indirimMiktar = toplamFiyat * 0.1;
+                birimFiyat = (toplamFiyat - indirimMiktar) / siparisAdet;
+            }
+            else if (siparisAdet>50 && siparisAdet<=100)
+            {
+                indirimMiktar = toplamFiyat * 0.15;
+                birimFiyat = (toplamFiyat - indirimMiktar) / siparisAdet;
+            }
+            else if (siparisAdet>100)
+            {
+                indirimMiktar = toplamFiyat * 0.25;
+                birimFiyat = (toplamFiyat - indirimMiktar) / siparisAdet;
+            }
+
             
         }
     }
