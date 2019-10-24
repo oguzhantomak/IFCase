@@ -148,7 +148,7 @@ namespace KararYapilari
 
         private void Btn4_Click(object sender, EventArgs e)
         {
-            double siparisAdet = Convert.ToInt32(txtGelenDeger1.Text);
+            double siparisAdet = Convert.ToDouble(txtGelenDeger1.Text);
             double indirimMiktar;
             double birimFiyat;
             double toplamFiyat=siparisAdet*5;
@@ -157,6 +157,8 @@ namespace KararYapilari
             {
                 indirimMiktar = toplamFiyat * 0.05;
                 birimFiyat = (toplamFiyat - indirimMiktar) / siparisAdet;
+sonFiyat=toplamFiyat-indirimMiktar;
+
 
                 toplamFiyat += toplamFiyat - indirimMiktar;
                 MessageBox.Show("Test");
