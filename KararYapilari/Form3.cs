@@ -12,6 +12,12 @@ namespace KararYapilari
 {
     public partial class Form3 : Form
     {
+        public void randomDeger()
+        {
+            Random rnd = new Random();
+            int rastgele = rnd.Next(10000000, 100000000);
+            lblRastgeleGelenDeger.Text = rastgele.ToString();
+        }
         public Form3()
         {
             InitializeComponent();
@@ -19,9 +25,7 @@ namespace KararYapilari
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            int rastgele = rnd.Next(10000000, 100000000);
-            lblRastgeleGelenDeger.Text = rastgele.ToString();
+            randomDeger(); 
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
@@ -29,13 +33,17 @@ namespace KararYapilari
             int kalan = Convert.ToInt32(lblKalanHak.Text);
             if (txt1.Text == lblRastgeleGelenDeger.Text)
             {
-                MessageBox.Show("Tebrikler");
+                MessageBox.Show("Tebrikler, doğrulamayı geçtiniz !");
+                txt1.Clear();
+                txt1.Focus();
             }
             else
             {
+                randomDeger();
+                
                 txt1.Clear();
                 txt1.Focus();
-                MessageBox.Show("Hata");
+                MessageBox.Show("Doğrulama kodu hatalı, tekrar deneyiniz.\n Hakkınız 1 azaldı !");
                 kalan--;
                 lblKalanHak.Text = kalan.ToString();
                 if (kalan == 0)
