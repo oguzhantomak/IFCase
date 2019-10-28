@@ -84,9 +84,10 @@
             // lblKalanHak
             // 
             this.lblKalanHak.AutoSize = true;
+            this.lblKalanHak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKalanHak.Location = new System.Drawing.Point(231, 117);
             this.lblKalanHak.Name = "lblKalanHak";
-            this.lblKalanHak.Size = new System.Drawing.Size(13, 13);
+            this.lblKalanHak.Size = new System.Drawing.Size(18, 20);
             this.lblKalanHak.TabIndex = 5;
             this.lblKalanHak.Text = "5";
             // 
