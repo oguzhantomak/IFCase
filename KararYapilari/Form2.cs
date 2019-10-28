@@ -152,7 +152,7 @@ namespace KararYapilari
             {
                 double siparisAdet = Convert.ToDouble(txtGelenDeger1.Text);
                 double birimFiyat = 5;
-                double toplamFiyat = siparisAdet * 5;
+                double toplamFiyat = siparisAdet * birimFiyat;
 
                 double indirimMiktar;
                 double sonFiyat;
@@ -164,28 +164,65 @@ namespace KararYapilari
                         indirimMiktar = toplamFiyat * 0.05;
                         sonFiyat = toplamFiyat - indirimMiktar;
 
-                        MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %5 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+                        //MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %5 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+
+                        MessageBox.Show(string.Format(
+@"Toplam Siariş Adedi: {0} 
+Birim Fiyat: {1}
+Toplam Tutar: {2} 
+Yapılan İndirim Oranı: %5 
+Yapılan İndirim Miktarı: {3}
+Ödemeniz Gereken Tutar: {4}", siparisAdet, birimFiyat, toplamFiyat, indirimMiktar, sonFiyat));
+                        txtGelenDeger1.Clear();
+
                     }
                     else if (siparisAdet > 20 && siparisAdet <= 50)
                     {
                         indirimMiktar = toplamFiyat * 0.10;
                         sonFiyat = toplamFiyat - indirimMiktar;
 
-                        MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %10 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+                        //MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %10 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+
+                        MessageBox.Show(string.Format(
+@"Toplam Siariş Adedi: {0} 
+Birim Fiyat: {1}
+Toplam Tutar: {2} 
+Yapılan İndirim Oranı: %10 
+Yapılan İndirim Miktarı: {3}
+Ödemeniz Gereken Tutar: {4}", siparisAdet, birimFiyat, toplamFiyat, indirimMiktar, sonFiyat));
+                        txtGelenDeger1.Clear();
                     }
                     else if (siparisAdet > 50 && siparisAdet <= 100)
                     {
                         indirimMiktar = toplamFiyat * 0.15;
                         sonFiyat = toplamFiyat - indirimMiktar;
 
-                        MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %15 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+                        //MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %15 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+
+                        MessageBox.Show(string.Format(
+@"Toplam Siariş Adedi: {0} 
+Birim Fiyat: {1}
+Toplam Tutar: {2} 
+Yapılan İndirim Oranı: %15 
+Yapılan İndirim Miktarı: {3}
+Ödemeniz Gereken Tutar: {4}", siparisAdet, birimFiyat, toplamFiyat, indirimMiktar, sonFiyat));
+                        txtGelenDeger1.Clear();
                     }
                     else if (siparisAdet > 100)
                     {
                         indirimMiktar = toplamFiyat * 0.25;
                         sonFiyat = toplamFiyat - indirimMiktar;
 
-                        MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %25 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+                        //MessageBox.Show("Toplam Sipariş Adedi: " + siparisAdet + "\nBirim Fiyat: " + birimFiyat + "\nToplam Tutar:" + toplamFiyat + "\nYapılan İnidirim Oranı: %25 " + "\nYapılan İndirim Miktarı: " + indirimMiktar + "\nÖdemeniz gereken tutar: " + sonFiyat);
+
+                        MessageBox.Show(string.Format(
+@"Toplam Siariş Adedi: {0} 
+Birim Fiyat: {1}
+Toplam Tutar: {2} 
+Yapılan İndirim Oranı: %25 
+Yapılan İndirim Miktarı: {3}
+Ödemeniz Gereken Tutar: {4}", siparisAdet, birimFiyat, toplamFiyat, indirimMiktar, sonFiyat));
+                        txtGelenDeger1.Clear();
                     }
                 }
                 else
